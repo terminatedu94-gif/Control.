@@ -12,6 +12,6 @@
  <div class="copyright">
         Google ©2026
       </div>
-<script src="googlehacks.js"></script>
+<script src="googlehack.js"></script>
   </body>
 </html>
