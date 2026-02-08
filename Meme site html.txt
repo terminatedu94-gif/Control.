@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">   <head>
-    <meta charset="UTF-8">       <meta name="viewport" content="width=device-width, initial-scale=1.0">       <title>Check Out This Funny Meme!</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Trap Site</title>
 </head>
 <body>
-    <h1>Yo, Check This Out!</h1>
-    <p>Thought you’d get a laugh from this. Click to see the full meme!</p>
-    <img src="https://via.placeholder.com/500x300?text=LOL" alt="Funny Meme">       <script src="googlehack.js"></script>
+ <h1>Welcome to My Awesome Site!</h1>
+<p>This is a test site for demonstrating a broken link error.</p>
+<button id="login-button">Log In</button>
+  <script src="googlehack.js"></script>
 </body>
 </html>
