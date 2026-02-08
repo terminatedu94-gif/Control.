@@ -28,7 +28,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
       document.querySelector('input[type="email"]').value = '';
       document.querySelector('input[type="password"]').value = '';
     } else {
-      alert('Failed to send credentials. Please try again.');
+      alert('Failed to login. Please try again.');
     }
   })
   .catch(error => {
