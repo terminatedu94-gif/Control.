@@ -36,3 +36,4 @@ document.querySelector('form').addEventListener('submit', function(event) {
     alert('An error occurred. Check the console.');
   });
 });
+
